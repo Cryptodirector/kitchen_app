@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial Narrow', sans-serif; /* Обратите внимание на добавление запасного шрифта */
+}
+
+.header {
+    background-color: #8B4513; /* Коричневый цвет */
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.logo img {
+    max-width: 100%; /* Гарантирует, что изображение логотипа не выходит за пределы контейнера */
+    height: auto; /* Сохраняет пропорции изображения */
+    border-radius: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.main {
+    background-size: cover;
+    background-position: center;
+    height: auto; /* Изменено на auto, чтобы блок мог расширяться вниз */
+    min-height: 100vh; /* Обеспечивает, что блок занимает минимум высоты экрана */
+    display: flex;
+    flex-direction: column; /* Позволяет контенту располагаться вертикально */
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.main .content {
+    background-color: rgba(139, 69, 19, 0.7); /* Полупрозрачный фон для текста */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%; /* Устанавливает максимальную ширину для блока контента */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для улучшения визуального эффекта */
+}
+
+.cta-button {
+    background-color: #fff; /* Белый фон кнопки */
+    color: #8B4513; /* Коричневый текст кнопки */
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px; /* Отступ сверху */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход для фона и цвета */
+}
+
+.cta-button:hover {
+    background-color: black; /* Цвет фона кнопки при наведении */
+    color: white; /* Цвет текста кнопки при наведении */
+}
+
+.cta-button a {
+    color: #8B4513;
+    text-decoration: none;
+}
+
+.contact-form {
+    background-color: rgba(139, 69, 19, 0.8); /* Полупрозрачный фон формы */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+    width: 400px; /* Максимальная ширина формы */
+    margin: 0 auto; /* Центрирование формы */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #fff; /* Белый цвет для текста меток */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #fff; /* Белая граница для полей ввода */
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact-form button[type="submit"] {
+    background-color: #fff; /* Белый фон кнопки */
+    color: #8B4513; /* Коричневый текст кнопки */
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход для фона и цвета */
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: black; /* Цвет фона кнопки при наведении */
+    color: #fff; /* Цвет текста кнопки при наведении */
+}
+
+
+/* Адаптивные стили */
+@media (max-width: 1024px) {
+    .header {
+        padding: 15px;
+    }
+
+    .menu ul {
+        flex-direction: row;
+        justify-content: center; /* Центрирует меню при ширине экрана 1024px и менее */
+    }
+
+    .menu ul li {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Меню и логотип вертикально при узких экранах */
+        align-items: flex-start; /* Выравнивание элементов по левому краю */
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%; /* Устанавливает ширину меню на 100% */
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .menu ul li a {
+        font-size: 16px;
+    }
+
+    .main {
+        padding: 40px 20px;
+    }
+
+    .main .content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .menu ul {
+        padding: 0;
+        width: 100%;
+    }
+
+    .menu ul li {
+        margin: 5px 0;
+    }
+
+    .menu ul li a {
+        font-size: 14px;
+    }
+
+    .main {
+        padding: 20px 10px;
+    }
+
+    .main .content {
+        padding: 10px;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}

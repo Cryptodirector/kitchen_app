@@ -1,0 +1,10 @@
+FROM nginx:alpine
+
+# Копируем конфигурационный файл Nginx в контейнер
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Копируем SSL сертификаты в контейнер
+COPY app/ssl/ /etc/nginx/ssl/
+
+# Копируем статические файлы в контейнер
+COPY app/static/ /static/
